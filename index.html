@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Feliz Aniversário, Pai!</title>
+  <style>
+    body {
+      text-align: center;
+      font-family: sans-serif;
+      background: linear-gradient(to bottom right, #ffebcd, #ffe4b5);
+      color: #333;
+      padding: 20px;
+    }
+    img {
+      max-width: 90%;
+      border-radius: 20px;
+      margin-top: 20px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    }
+    audio {
+      margin-top: 20px;
+    }
+    .mensagem {
+      margin-top: 20px;
+      font-size: 1.2em;
+      white-space: pre-line;
+    }
+    #qrcode {
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+  <h1>🎉 Feliz Aniversário, Pai!</h1>
+
+  <img src="foto.jpg" alt="Pai e filho juntos">
+
+  <div class="mensagem">
+    Pai, neste dia tão especial, quero te agradecer por tudo. <br>
+    Sua força, seu amor e sua presença fazem toda a diferença na minha vida. <br>
+    Te amo muito! Feliz aniversário!
+  </div>
+
+  <audio controls autoplay loop>
+    <source src="musica.mp3" type="audio/mp3">
+    Seu navegador não suporta áudio.
+  </audio>
+
+  <div id="qrcode"></div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+  <script>
+    const url = window.location.href;
+    new QRCode(document.getElementById("qrcode"), url);
+  </script>
+</body>
+</html>
